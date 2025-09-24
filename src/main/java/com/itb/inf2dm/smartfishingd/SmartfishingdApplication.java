@@ -8,6 +8,7 @@ public class SmartfishingdApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmartfishingdApplication.class, args);
-	}
 
+		System.out.println("Hello World!");
+	}
 }

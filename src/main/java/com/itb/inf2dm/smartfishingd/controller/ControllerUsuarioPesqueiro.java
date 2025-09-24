@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/usuario")
+@RequestMapping("/api/v1/usuariopesqueiro")
 public class ControllerUsuarioPesqueiro {
     List <UsuarioPesqueiro> usuarioPesqueiros = new ArrayList<>();
     @GetMapping

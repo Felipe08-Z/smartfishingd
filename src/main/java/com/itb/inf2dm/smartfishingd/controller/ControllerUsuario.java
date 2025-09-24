@@ -15,7 +15,7 @@ public class ControllerUsuario {
     List<Usuario> usuarios = new ArrayList<Usuario>();
 
     @GetMapping
-    public List<Usuario> findall () {
+    public List<Usuario> findall() {
 
         Usuario u1 = new Usuario();
         u1.setNome("");

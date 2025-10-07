@@ -3,7 +3,7 @@ package com.itb.inf2dm.smartfishingd.model.entity;
 import java.time.LocalDate;
 
 public class Pesqueiro {
-    private int id;
+    private Long id;
     private String nome;
     private String telefone;
     private String descricao;
@@ -16,11 +16,11 @@ public class Pesqueiro {
     private String dataCadastro;
     private String statusPesqueiro;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -2,17 +2,17 @@ package com.itb.inf2dm.smartfishingd.model.entity;
 
 public class Peixe {
 
-    private int id;
+    private Long id;
     private String nome;
     private String descricao;
     private String foto;
     private String statusPeixe;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

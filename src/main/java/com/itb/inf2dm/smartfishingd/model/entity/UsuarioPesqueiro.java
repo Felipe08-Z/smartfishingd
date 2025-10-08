@@ -1,8 +1,14 @@
 package com.itb.inf2dm.smartfishingd.model.entity;
-
+import jakarta.persistence.*;
+@Entity
+@Table(name = "Catalogo")
 public class UsuarioPesqueiro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = true)
     private String idUsuario;
+    @Column(nullable = true)
     private String idPesqueiro;
 
     public Long getId() {

@@ -1,15 +1,27 @@
 package com.itb.inf2dm.smartfishingd.model.entity;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
-public class Usuario {
+@Entity
+@Table(name = "Usuario")
 
+
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 100, nullable = false)
     private String nome;
+    @Column(length = 100, nullable = false)
     private String email;
+    @Column(length = 100, nullable = false)
     private String senha;
+    @Column(length = 100, nullable = true)
     private String nivelAcesso;
+    @Column(length = 100, nullable = true)
     private String foto;
+    @Column(length = 100, nullable = true)
     private LocalDate dataCadastro;
     private String statusUsuario;
 

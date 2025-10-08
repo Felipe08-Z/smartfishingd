@@ -1,16 +1,30 @@
 package com.itb.inf2dm.smartfishingd.model.entity;
-
+import jakarta.persistence.*;
+@Entity
+@Table(name = "Pesqueiro")
 public class Pesqueiro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 100, nullable = false)
     private String nome;
+    @Column(length = 15, nullable = false)
     private String telefone;
+    @Column(length = 250, nullable = false)
     private String descricao;
+    @Column(length = 200, nullable = false)
     private String informacao;
+    @Column(length = 10, nullable = true)
     private String foto;
+    @Column(length = 500, nullable = true)
     private String mapa;
+    @Column(length = 100, nullable = true)
     private String cep;
+    @Column(length = 45, nullable = true)
     private String numero;
+    @Column(length = 15, nullable = true)
     private String complemento;
+    @Column(length = 100, nullable = true)
     private String dataCadastro;
     private String statusPesqueiro;
 

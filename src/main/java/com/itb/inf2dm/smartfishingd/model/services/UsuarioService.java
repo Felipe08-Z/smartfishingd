@@ -1,6 +1,6 @@
-package com.itb.inf2dm.smartfishingd.services;
+package com.itb.inf2dm.smartfishingd.model.services;
 import com.itb.inf2dm.smartfishingd.model.entity.Usuario;
-import com.itb.inf2dm.smartfishingd.repository.UsuarioRepository;
+import com.itb.inf2dm.smartfishingd.model.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

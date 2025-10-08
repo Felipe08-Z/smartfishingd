@@ -4,7 +4,7 @@ import com.itb.inf2dm.smartfishingd.model.entity.Peixe;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.itb.inf2dm.smartfishingd.services.PeixeService;
+import com.itb.inf2dm.smartfishingd.model.services.PeixeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/api/v1/peixe")
@@ -27,13 +26,13 @@ public class ControllerPeixe {
     }
 
     @PostMapping
-    public ResponseEntity<Peixe> salvarCatalogo(@RequestBody Peixe peixe) {
+    public ResponseEntity<Peixe> salvarPeixe(@RequestBody Peixe peixe) {
         Peixe novoPeixe = peixeService.save(peixe);
         return ResponseEntity.status(HttpStatus.CREATED).body(novoPeixe);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Object> listarCatalogoPorId(@PathVariable String id) {
+    public ResponseEntity<Object> listarPeixePorId(@PathVariable String id) {
         try {
             return ResponseEntity.ok(peixeService.findById(Long.parseLong(id)));
         } catch (NumberFormatException e) {
@@ -56,7 +55,7 @@ public class ControllerPeixe {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Object> atualizarCatalogo(@PathVariable String id, @RequestBody Peixe peixe) {
+    public ResponseEntity<Object> atualizarPeixe(@PathVariable String id, @RequestBody Peixe peixe) {
         try {
             return ResponseEntity.ok(peixeService.update(Long.parseLong(id), peixe));
         } catch (NumberFormatException e) {
@@ -79,7 +78,7 @@ public class ControllerPeixe {
         }
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deletarProdutoPorId(@PathVariable String id) {
+    public ResponseEntity<Object> deletarPeixePorId(@PathVariable String id) {
         try {
             peixeService.delete(Long.parseLong(id));
             return ResponseEntity.ok().body(

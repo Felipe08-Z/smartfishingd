@@ -1,7 +1,6 @@
-package com.itb.inf2dm.smartfishingd.services;
+package com.itb.inf2dm.smartfishingd.model.services;
 import com.itb.inf2dm.smartfishingd.model.entity.Pesqueiro;
-import com.itb.inf2dm.smartfishingd.model.entity.Pesqueiro;
-import com.itb.inf2dm.smartfishingd.repository.PesqueiroRepository;
+import com.itb.inf2dm.smartfishingd.model.repository.PesqueiroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

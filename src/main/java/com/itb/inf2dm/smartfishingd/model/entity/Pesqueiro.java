@@ -1,7 +1,5 @@
 package com.itb.inf2dm.smartfishingd.model.entity;
 
-import java.time.LocalDate;
-
 public class Pesqueiro {
     private Long id;
     private String nome;

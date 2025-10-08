@@ -4,7 +4,7 @@ import com.itb.inf2dm.smartfishingd.model.entity.Catalogo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.itb.inf2dm.smartfishingd.services.CatalogoService;
+import com.itb.inf2dm.smartfishingd.model.services.CatalogoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-import java.util.ArrayList;
 
 
 @RestController
@@ -79,7 +78,7 @@ public class ControllerCatalogo {
         }
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deletarProdutoPorId(@PathVariable String id) {
+    public ResponseEntity<Object> deletarCatalogoPorId(@PathVariable String id) {
         try {
             catalogoService.delete(Long.parseLong(id));
             return ResponseEntity.ok().body(

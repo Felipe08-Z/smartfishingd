@@ -11,19 +11,27 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(length = 100, nullable = false)
     private String nome;
+
     @Column(length = 100, nullable = false)
     private String email;
+
     @Column(length = 100, nullable = false)
     private String senha;
-    @Column(length = 100, nullable = true)
+
+    @Column(length = 10, nullable = true)
     private String nivelAcesso;
-    @Column(length = 100, nullable = true)
+
+    @Column(length = 255, nullable = true)
     private String foto;
-    @Column(length = 100, nullable = true)
+
+    @Column(nullable = false)
     private LocalDate dataCadastro;
-    private String statusUsuario;
+
+    @Column(name = "statusUsuario")
+    private Boolean statusUsuario;
 
 
     public Long getId() {
@@ -82,11 +90,11 @@ public class Usuario {
         this.dataCadastro = dataCadastro;
     }
 
-    public String getStatusUsuario() {
+    public Boolean getStatusUsuario() {
         return statusUsuario;
     }
 
-    public void setStatusUsuario(String statusUsuario) {
+    public void setStatusUsuario(Boolean statusUsuario) {
         this.statusUsuario = statusUsuario;
     }
 }

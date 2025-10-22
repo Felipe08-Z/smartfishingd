@@ -23,8 +23,8 @@ public class UsuarioPesqueiroService {
     public UsuarioPesqueiro update(Long id, UsuarioPesqueiro usuarioPesqueiro){
         UsuarioPesqueiro usuarioPesqueiroExistente = findById(id);
         usuarioPesqueiroExistente.setId(id);
-        usuarioPesqueiroExistente.setIdPesqueiro(usuarioPesqueiro.getIdPesqueiro());
-        usuarioPesqueiroExistente.setIdUsuario(usuarioPesqueiro.getIdUsuario());
+        usuarioPesqueiroExistente.setStatusUsuarioPesqueiro(usuarioPesqueiro.getStatusUsuarioPesqueiro());
+
         return usuarioPesqueiroRepository.save(usuarioPesqueiroExistente);
 
     }

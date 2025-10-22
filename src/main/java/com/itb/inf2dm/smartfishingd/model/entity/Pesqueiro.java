@@ -10,9 +10,9 @@ public class Pesqueiro {
     private String nome;
     @Column(length = 15, nullable = false)
     private String telefone;
-    @Column(length = 250, nullable = false)
+    @Column(length = 600, nullable = false)
     private String descricao;
-    @Column(length = 200, nullable = false)
+    @Column(length = 100,name = "informacao", nullable = false)
     private String informacao;
     @Column(length = 10, nullable = true)
     private String foto;
@@ -26,7 +26,8 @@ public class Pesqueiro {
     private String complemento;
     @Column(length = 100, nullable = true)
     private String dataCadastro;
-    private String statusPesqueiro;
+    @Column(name = "statusPesqueiro")
+    private Boolean statusPesqueiro;
 
     public Long getId() {
         return id;
@@ -97,11 +98,11 @@ public class Pesqueiro {
     }
 
 
-    public String getStatusPesqueiro() {
+    public Boolean getStatusPesqueiro() {
         return statusPesqueiro;
     }
 
-    public void setStatusPesqueiro(String statusPesqueiro) {
+    public void setStatusPesqueiro(Boolean statusPesqueiro) {
         this.statusPesqueiro = statusPesqueiro;
     }
 

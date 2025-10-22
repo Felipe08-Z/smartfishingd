@@ -7,13 +7,14 @@ public class Peixe {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 100, nullable = false)
+    @Column(length = 50, nullable = false)
     private String nome;
-    @Column(length = 250, nullable = false)
+    @Column(length = 200, nullable = false)
     private String descricao;
-    @Column(length = 100, nullable = true)
+    @Column(length = 15, nullable = true)
     private String foto;
-    private String statusPeixe;
+    @Column(name = "statusPeixe")
+    private Boolean statusPeixe;
 
     public Long getId() {
         return id;
@@ -47,11 +48,11 @@ public class Peixe {
         this.foto = foto;
     }
 
-    public String getStatusPeixe() {
+    public Boolean getStatusPeixe() {
         return statusPeixe;
     }
 
-    public void setStatusPeixe(String statusPeixe) {
+    public void setStatusPeixe(Boolean statusPeixe) {
         this.statusPeixe = statusPeixe;
     }
 }

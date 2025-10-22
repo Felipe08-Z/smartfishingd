@@ -1,15 +1,13 @@
 package com.itb.inf2dm.smartfishingd.model.entity;
 import jakarta.persistence.*;
 @Entity
-@Table(name = "Catalogo")
+@Table(name = "UsuarioPesqueiro")
 public class UsuarioPesqueiro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = true)
-    private String idUsuario;
-    @Column(nullable = true)
-    private String idPesqueiro;
+    @Column(name = "statusUsuarioPesqueiro")
+    private Boolean statusUsuarioPesqueiro;
 
     public Long getId() {
         return id;
@@ -19,19 +17,13 @@ public class UsuarioPesqueiro {
         this.id = id;
     }
 
-    public String getIdUsuario() {
-        return idUsuario;
+
+
+    public Boolean getStatusUsuarioPesqueiro() {
+        return statusUsuarioPesqueiro;
     }
 
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public String getIdPesqueiro() {
-        return idPesqueiro;
-    }
-
-    public void setIdPesqueiro(String idPesqueiro) {
-        this.idPesqueiro = idPesqueiro;
+    public void setStatusUsuarioPesqueiro(Boolean statusUsuarioPesqueiro) {
+        this.statusUsuarioPesqueiro = statusUsuarioPesqueiro;
     }
 }

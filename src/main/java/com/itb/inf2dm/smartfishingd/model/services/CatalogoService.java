@@ -20,8 +20,7 @@ public Catalogo save(Catalogo catalogo) {
 public Catalogo update(Long id, Catalogo catalogo) {
     Catalogo catalogoExistente = findById(id);
     catalogoExistente.setStatusCatalogo(catalogo.getStatusCatalogo());
-    catalogoExistente.setIdPeixe(catalogo.getIdPeixe());
-    catalogoExistente.setIdPesqueiro(catalogo.getIdPesqueiro());
+
     return catalogoRepository.save(catalogoExistente);
     }
     public Catalogo findById(Long id) {

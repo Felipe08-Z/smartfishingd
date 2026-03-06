@@ -1,17 +1,22 @@
 package com.itb.inf2dm.smartfishingd.controller;
 
-import com.itb.inf2dm.smartfishingd.model.entity.Catalogo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.itb.inf2dm.smartfishingd.model.services.CatalogoService;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Map;
+import com.itb.inf2dm.smartfishingd.model.entity.Catalogo;
+import com.itb.inf2dm.smartfishingd.model.services.CatalogoService;
 
 
 @RestController
@@ -48,7 +53,7 @@ public class ControllerCatalogo {
                     Map.of(
                             "status", 400,
                             "error", "badrequest",
-                            "message", "o id nao e valido" + id
+                            "message", "o id nao e validoo" + id
                     )
             );
         }
